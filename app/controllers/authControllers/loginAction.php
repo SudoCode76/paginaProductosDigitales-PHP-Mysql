@@ -13,14 +13,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             session_start();
             $_SESSION['usuario'] = $user['usuario'];
             $_SESSION['rol'] = $user['nombreRol']; 
-            header("Location: http://localhost/paginaProductosDigitales/app/views/dashboard.php");
+            header("Location: ../../views/dashboard.php");
             exit();
         } else {
-            header("Location: http://localhost/paginaProductosDigitales/public/index.php?error=1");
+            header("Location: ../../../public/index.php?error=1");
             exit();
         }
     } else {
-        header("Location: http://localhost/paginaProductosDigitales/public/index.php?error=1");
+        header("Location: ../../../public/index.php?error=1");
         exit();
     }
 }
